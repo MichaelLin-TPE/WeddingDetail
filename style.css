@@ -115,3 +115,223 @@ footer {
     width: 45%;
   }
 }
+/* 🔸 新增名單按鈕樣式 */
+.add-button {
+  background: linear-gradient(90deg, #ff8fab, #ffc1cc);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:hover {
+  background: linear-gradient(90deg, #ff6b81, #ffa4b5);
+  transform: scale(1.05);
+}
+/* 🔸 彈窗背景 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 隱藏狀態 */
+.hidden {
+  display: none;
+}
+
+/* 🔸 彈窗內容 */
+.popup-content {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
+/* 🔸 標題 */
+.popup-content h2 {
+  text-align: center;
+  color: #ff4d6d;
+  margin-bottom: 20px;
+}
+
+/* 🔸 關閉按鈕 */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.close:hover {
+  color: #ff4d6d;
+}
+
+/* 🔸 表單設計 */
+#addForm label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+#addForm input,
+#addForm select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #ff8fab, #ffc1cc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #ff6b81, #ffa4b5);
+  transform: scale(1.03);
+}
+
+/* 🔸 動畫效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.topbar {
+  background: linear-gradient(90deg, #ff8fab, #ffc1cc);
+  color: white;
+  padding: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+.popup-content.login {
+  max-width: 360px;
+}
+
+/* 🔸 登入表單獨立樣式 */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#loginForm label {
+  margin-top: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#loginForm .submit-btn {
+  margin-top: 15px;
+}
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin: 0 2px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #ffb3c1;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #ff6b81;
+}
+
+.delete-btn {
+  background: #ff8b94;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #ff4d6d;
+}
+#editForm label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+#editForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
