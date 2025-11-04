@@ -1,0 +1,117 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #fff5f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(90deg, #ff8fab, #ffc1cc);
+  color: white;
+  padding: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 60px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0;
+}
+
+.search-bar {
+  margin: 20px auto;
+}
+
+.search-bar input {
+  width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #ff8fab;
+  outline: none;
+  box-shadow: 0 0 8px #ffc1cc;
+}
+
+/* 🔥 新增這個 main 區塊的彈性排版控制 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* list-container 預設樣式 */
+.list-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  transition: 0.3s ease;
+}
+
+.money-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.money-table th {
+  background: #ffe5ec;
+  color: #333;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.money-table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.total {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+.no-result {
+  text-align: center;
+  padding: 15px;
+  color: #aaa;
+  font-style: italic;
+}
+
+footer {
+  margin: 30px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+/* 💻 桌機版（螢幕寬度大於768px時）：左右並排 */
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .list-container {
+    width: 45%;
+  }
+}

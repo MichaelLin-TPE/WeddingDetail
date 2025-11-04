@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>老劉與蔓蒂</title>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore-compat.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="./images/logo.png" alt="logo" class="logo" />
+      <h1>💒 老劉與蔓蒂 💝</h1>
+    </header>
+
+    <section class="search-bar">
+      <input id="searchInput" type="text" placeholder="搜尋姓名或編號..." />
+    </section>
+
+    <main>
+      <div class="list-container">
+        <h2>👰 女方親友</h2>
+        <table id="femaleList" class="money-table">
+          <thead>
+            <tr>
+              <th>編號</th>
+              <th>姓名</th>
+              <th>金額</th>
+              <th>分類</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="total">女方總金額：<span id="femaleTotal">0</span> 元</div>
+      </div>
+
+      <div class="list-container">
+        <h2>🤵 男方親友</h2>
+        <table id="maleList" class="money-table">
+          <thead>
+            <tr>
+              <th>編號</th>
+              <th>姓名</th>
+              <th>金額</th>
+              <th>分類</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="total">男方總金額：<span id="maleTotal">0</span> 元</div>
+      </div>
+    </main>
+
+    <footer>
+      <p>💍 感謝每一位親友的祝福 💕</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
