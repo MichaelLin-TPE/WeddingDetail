@@ -71,7 +71,7 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
         }
         `;
     tbody.appendChild(tr);
-    total += money;
+    total += Number(money);
   });
   if (isLoggedIn) {
     const deleteBtns = tbody.querySelectorAll(".delete-btn");
