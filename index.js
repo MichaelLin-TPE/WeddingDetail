@@ -53,7 +53,7 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
   }
 
   filtered.forEach((item) => {
-    const money = Number(item.money) || 0;
+    const money = item.money || "0";
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -153,7 +153,7 @@ addForm.addEventListener("submit", async (e) => {
 
   const name = document.getElementById("nameInput").value.trim();
   const type = document.getElementById("typeSelect").value;
-  const money = Number(document.getElementById("moneyInput").value) || 0;
+  const money = document.getElementById("moneyInput").value.trim() || "0";
 
   if (!name) {
     alert("請輸入姓名");
@@ -293,7 +293,7 @@ editForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const newName = editNameInput.value.trim();
-  const newMoney = Number(editMoneyInput.value) || 0;
+  const newMoney = editMoneyInput.value.trim() || "0";
 
   if (!newName) {
     alert("姓名不能為空！");
