@@ -56,18 +56,18 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
 
   filtered.forEach((item) => {
     const money = item.money || "0";
-    const invitedIcon = item.isInvited ? "✅" : "❌";
+    const invitedIcon = item.isInvited ? "✅" : "-";
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${item.no ?? "-"}</td>
       <td>${item.name ?? "-"}</td>
       <td>${money}</td>
-      <td>${invitedIcon}</td>
       <td>${item.cookieCount ?? "0"}</td>
       <td><button class="remark-btn" data-remark="${
         item.remark || ""
       }">查看</button></td>
+      <td>${invitedIcon}</td>
       ${
         isLoggedIn
           ? `<td>
@@ -81,7 +81,8 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
     total += Number(money);
   });
 
-  document.getElementById(totalId).textContent = total;
+  document.getElementById(totalId).textContent =
+    "$" + total.toLocaleString("zh-TW");
 
   // 綁定「查看備註」事件
   const remarkBtns = tbody.querySelectorAll(".remark-btn");
