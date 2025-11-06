@@ -9,7 +9,7 @@ const firebaseConfig = {
 };
 
 let isLoggedIn = false; // 一開始預設未登入
-
+let allTotalAmount = 0;
 // 初始化 Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -80,7 +80,8 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
     tbody.appendChild(tr);
     total += Number(money);
   });
-
+  allTotalAmount += total;
+  updateGrandTotal();
   document.getElementById(totalId).textContent =
     "$" + total.toLocaleString("zh-TW");
 
@@ -128,8 +129,10 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
 
 // 初始化
 async function init() {
+  allTotalAmount = 0;
   const femaleData = await fetchData("female_friends");
   const maleData = await fetchData("male_friends");
+
   renderTable(femaleData, "femaleList", "femaleTotal");
   renderTable(maleData, "maleList", "maleTotal");
 
@@ -139,6 +142,26 @@ async function init() {
     renderTable(femaleData, "femaleList", "femaleTotal", term);
     renderTable(maleData, "maleList", "maleTotal", term);
   });
+}
+
+function getNumberFromSpan(id) {
+  const el = document.getElementById(id);
+  if (!el) return 0;
+
+  const raw = (el.textContent || "0").trim();
+  // 把逗號、空白都拔掉，只留數字
+  const cleaned = raw.replace(/,/g, "").replace(/\s+/g, "");
+  const num = parseInt(cleaned, 10);
+
+  return isNaN(num) ? 0 : num;
+}
+
+function updateGrandTotal() {
+  const sum = allTotalAmount;
+  const grandEl = document.getElementById("grandTotal");
+  if (grandEl) {
+    grandEl.textContent = sum.toLocaleString("zh-TW");
+  }
 }
 
 init();

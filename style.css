@@ -349,3 +349,10 @@ footer {
 .remark-btn:hover {
   background: linear-gradient(90deg, #ff6b81, #ffa4b5);
 }
+.overall-total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4d6d;
+  text-align: center;
+  margin-bottom: 15px;
+}
