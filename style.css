@@ -335,3 +335,17 @@ footer {
   font-size: 16px;
   box-sizing: border-box;
 }
+.remark-btn {
+  background: linear-gradient(90deg, #ffb6c1, #ffc1cc);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.remark-btn:hover {
+  background: linear-gradient(90deg, #ff6b81, #ffa4b5);
+}

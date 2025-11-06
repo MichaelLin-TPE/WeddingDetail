@@ -34,7 +34,9 @@
               <th>編號</th>
               <th>姓名</th>
               <th>金額</th>
-              <th>分類</th>
+              <th>禮到人沒到</th>
+              <th>喜餅數量</th>
+              <th>備註</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -50,7 +52,9 @@
               <th>編號</th>
               <th>姓名</th>
               <th>金額</th>
-              <th>分類</th>
+              <th>禮到人沒到</th>
+              <th>喜餅數量</th>
+              <th>備註</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -176,6 +180,22 @@
             <button type="submit" class="submit-btn">儲存變更</button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- 🔸 備註查看彈窗 -->
+    <div id="remarkPopup" class="popup hidden">
+      <div class="popup-content">
+        <h2>備註內容</h2>
+        <p
+          id="remarkContent"
+          style="white-space: pre-line; margin-top: 10px"
+        ></p>
+        <div style="text-align: center; margin-top: 20px">
+          <button id="closeRemarkBtn" class="submit-btn" style="width: 120px">
+            關閉
+          </button>
+        </div>
       </div>
     </div>
 
