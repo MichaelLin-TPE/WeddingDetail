@@ -56,7 +56,7 @@ function renderTable(data, tableBodyId, totalId, searchTerm = "") {
 
   filtered.forEach((item) => {
     const money = item.money || "0";
-    const invitedIcon = item.isInvited ? "✅" : "-";
+    const invitedIcon = item.isInvited ? "-" : "✅";
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
